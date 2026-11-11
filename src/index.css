@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Poppins', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-primary: #6C63FF;
+  --color-accent: #00E5FF;
+  --color-highlight: #7C4DFF;
+  --color-bg-dark: #06080E;
+  --color-text-main: #FFFFFF;
+  --color-text-secondary: #94A3B8;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #06080E;
+}
+
+body {
+  background-color: #06080E;
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+/* Hide scrollbars cleanly across browsers */
+::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  background: transparent;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Metallic specular shimmer keyframe animation */
+@keyframes shimmerSweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer-sweep {
+  animation: shimmerSweep 4.5s ease-in-out infinite;
+}
+
+/* Premium Automotive Dark Glassmorphism */
+.glass-panel {
+  background: rgba(10, 15, 25, 0.42);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.38), inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.glass-panel-subtle {
+  background: rgba(10, 15, 25, 0.32);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25), inset 0 1px 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(12, 18, 30, 0.55);
+  border-color: rgba(0, 229, 255, 0.40);
+  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.45), 0 0 18px 0 rgba(0, 229, 255, 0.15), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
